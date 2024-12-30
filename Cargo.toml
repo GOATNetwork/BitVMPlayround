@@ -1,0 +1,46 @@
+[package]
+name = "bitvm_poc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+serde_json = "1.0.116"
+shh = "1.0.1"
+clap = "4.3"
+hex = "0.4.3"
+bitcoin-script = { git = "https://github.com/BitVM/rust-bitcoin-script", branch= "StructuredScript" }
+bitcoin = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm", features = ["rand-std"]}
+bitcoincore-rpc-json = { git = "https://github.com/rust-bitcoin/rust-bitcoincore-rpc.git", tag = "v0.16.0" }
+bitcoincore-rpc = { git = "https://github.com/rust-bitcoin/rust-bitcoincore-rpc.git", tag = "v0.16.0" }
+bitcoin-origin = { version = "0.29.2", package = "bitcoin" }
+bitcoin-hashes-origin = { version = "0.11.0", package = "bitcoin_hashes" }
+bitcoin_hashes = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitvm = { git = "https://github.com/KSlashh/BitVM.git", branch = "chunk-regtest" } 
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+lto = true
+
+[patch.crates-io]
+base58check = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitcoin = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitcoin_hashes = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitcoin-internals = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitcoin-io = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+bitcoin-units = { git = "https://github.com/rust-bitcoin/rust-bitcoin", branch = "bitvm"}
+
+ark-ff = { git = "https://github.com/chainwayxyz/algebra/", branch = "new-ate-loop" }
+ark-ec = { git = "https://github.com/chainwayxyz/algebra/", branch = "new-ate-loop" }
+ark-poly = { git = "https://github.com/chainwayxyz/algebra/", branch = "new-ate-loop" }
+ark-serialize = { git = "https://github.com/chainwayxyz/algebra/", branch = "new-ate-loop" }
+ark-bn254 = { git = "https://github.com/chainwayxyz/algebra/", branch = "new-ate-loop", features = ["curve"], default-features = false }
+
+ark-r1cs-std = { git = "https://github.com/arkworks-rs/r1cs-std/" }
+ark-crypto-primitives = { git = "https://github.com/arkworks-rs/crypto-primitives/" }
+
+ark-relations = { git = "https://github.com/arkworks-rs/snark/" }
+ark-snark = { git = "https://github.com/arkworks-rs/snark/" }
+ark-groth16 = { git = "https://github.com/arkworks-rs/groth16" }
