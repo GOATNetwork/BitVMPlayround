@@ -1,0 +1,12 @@
+debug/
+target/
+**/*.rs.bk
+*.pdb
+.env
+/target
+.idea
+.vscode
+.DS_Store
+
+data-dir/*
+!data-dir/dummy_proof.json
