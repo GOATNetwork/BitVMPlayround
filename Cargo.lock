@@ -1735,25 +1735,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bitvm_poc"
-version = "0.1.0"
-dependencies = [
- "bitcoin 0.29.2",
- "bitcoin 0.31.0",
- "bitcoin-script",
- "bitcoin_hashes 0.11.0",
- "bitcoin_hashes 0.13.0",
- "bitcoincore-rpc",
- "bitcoincore-rpc-json",
- "bitvm",
- "clap",
- "hex",
- "serde_json",
- "shh",
- "tokio",
-]
-
-[[package]]
 name = "blake2"
 version = "0.10.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2670,6 +2651,25 @@ dependencies = [
  "futures-core",
  "js-sys",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "goat-bitvm-cli"
+version = "0.1.0"
+dependencies = [
+ "bitcoin 0.29.2",
+ "bitcoin 0.31.0",
+ "bitcoin-script",
+ "bitcoin_hashes 0.11.0",
+ "bitcoin_hashes 0.13.0",
+ "bitcoincore-rpc",
+ "bitcoincore-rpc-json",
+ "bitvm",
+ "clap",
+ "hex",
+ "serde_json",
+ "shh",
+ "tokio",
 ]
 
 [[package]]

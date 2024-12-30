@@ -1,5 +1,5 @@
 [package]
-name = "bitvm_poc"
+name = "goat-bitvm-cli"
 version = "0.1.0"
 edition = "2021"
 

@@ -25,7 +25,7 @@ We'll support custom proof in the near future.
 To init, run:
 
 ``` bash
-target/debug/bitvm_poc init
+target/debug/goat-bitvm-cli init
 ```
 ### 2. Run an instance
 
@@ -42,7 +42,7 @@ Take_1 challenge period is set to 0 for convenience, actual period should be 7-d
 
 To try take_1 path, run:
 ``` bash 
-target/debug/bitvm_poc run take_1
+target/debug/goat-bitvm-cli run take_1
 ```
 
 ### take_2
@@ -58,7 +58,7 @@ Like take_1, take_2 waiting period is set to 0 for convenience, actual period sh
 
 To try take_2 path, run:
 ``` bash 
-target/debug/bitvm_poc run take_1
+target/debug/goat-bitvm-cli run take_1
 ```
 
 ### disprove
@@ -72,7 +72,7 @@ peg-in ...... kick-off ---> assert ---> disprove
 ```
 To try disprove path, run: ( --index is optional, default: 1 )
 ``` bash
-target/debug/bitvm_poc run disprove --index <INDEX>
+target/debug/goat-bitvm-cli run disprove --index <INDEX>
 ```
 
 ## Introduction to BitVM2
